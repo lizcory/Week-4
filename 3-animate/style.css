@@ -1,0 +1,22 @@
+html, body {
+    margin: 0px;
+    background: #aaa;
+    font-family: sans-serif;
+}
+
+div.container {
+    width: 800px;
+    margin: auto;
+}
+div.state-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+g.axis-x > g.tick > text {
+    transform: translate(17px, 22px) rotateZ(60deg);
+}
+    
+rect {
+    fill: darkolivegreen;
+}
