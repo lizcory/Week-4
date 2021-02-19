@@ -21,33 +21,9 @@ d3.csv('data/covid_data.csv')
         states = Array.from(states);
         states = states.sort();
         populateStates(states);
-
-        let barChart = new BarChart();
-    
-        barChart
-            .margin(margins)
-            .size(size)
-            .selection(containerG)
-            .data(data)
-            .filterState(states[0])
-            .dispatch(dispatch)
-            .draw();
-
     });
 
 
 function populateStates(states) {
 
-    d3.select('#state')
-        .selectAll('option.state')
-        .data(states)
-        .join('option')
-        .classed('state', true)
-        .attr('value', d => d)
-        .text(d => d);
-
-    d3.select('#state')
-        .on('change', function() {
-            dispatch.call('changeState', this, this.value);
-        });
 }

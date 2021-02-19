@@ -35,4 +35,11 @@ d3.csv('data/covid_data.csv')
             .dispatch(dispatch)
             .draw();
 
+
+        // ANNOTATIONS
+        let scrollActions = new ScrollActions();
+        scrollActions
+            .dispatch(dispatch)
+            .addScrollTriggers();
+
 });
