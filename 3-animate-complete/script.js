@@ -22,8 +22,11 @@ d3.csv('data/covid_data.csv')
         states = states.sort();
         populateStates(states);
 
+        // creating a barChart variable
         let barChart = new BarChart();
     
+        // setting properties of the barchart
+        // refer: bar-chart.js
         barChart
             .margin(margins)
             .size(size)
@@ -31,11 +34,13 @@ d3.csv('data/covid_data.csv')
             .data(data)
             .filterState(states[0])
             .dispatch(dispatch)
-            .draw();
+            .draw(); // then drawing the barchart
 
+        // Basically, we have export all the code to draw a barchart
+        // into a different file called bar-chart.js
     });
 
-
+// This function creates the options in the dropdown to choose states
 function populateStates(states) {
 
     d3.select('#state')
